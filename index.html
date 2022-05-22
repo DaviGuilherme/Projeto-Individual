@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Individual</title>
+    <title>Faustão Treino Maker</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="img/montagem-faustao.png">
 </head>
-<body >
-    <!--Cabeçalho-->
-    <h1>Academia do Faustão</h1>
-    <!--Área do acesso-->
-    <section class="area">
-        <div class="acesso">
-            <div class="tela">
-                <p>Login</p>
-                <input type="text" class="ipt">
-                <p>Senha</p>
-                <input type="password" class="ipt">
-                <button class="btn">Entrar</button>
+
+<body>
+    <main>
+        <!--Cabeçalho-->
+        <h1>Faustão Training Maker</h1>
+        <!--Área do acesso-->
+        <section class="area">
+
+            <video autoplay loop muted poster="./img/montagem-faustao.png" class="bg-video">
+                <source src="/Projeto-Individual/movie/videoFausto.mp4" type="video/mp4">
+            </video>
+
+            <div class="acesso">
+                <div class="login">
+                    <!-- <p id="bem-vindo">Faustão Treino Maker</p> -->
+                    <p>Login</p> 
+                    <input type="text" class="ipt">
+                    <p>Senha</p>
+                    <input type="password" class="ipt">
+                    <button class="btn">Entrar</button>
+                </div>
+                <div class="tela">
+                </div>
             </div>
-        </div>
-    </section>
-    <!--footer-->
-    <footer>
-        <div class="footer">
-            Feito por <span class="bold">Davi Guilherme</span>  1-CCO
-        </div>
-    </footer>
+
+        </section>
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                Feito por <span class="bold">Davi Guilherme</span> 1-CCO
+            </div>
+        </footer>
+    </main>
 </body>
+
 </html>

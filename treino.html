@@ -1,36 +1,109 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projeto Individual</title>
-        <link rel="stylesheet" href="css/estilo-treino.css">
-    </head>
-    <body>
-        <!--Menu de seleção-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faustão Treino Maker</title>
+    <link rel="stylesheet" href="css/estilo-treino.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!--Menu de seleção-->
+    <main class="tudo">
         <section class="menu">
             <div class="box-treino" onclick="treino()">
                 <p>Treino 1</p>
             </div>
-            <div class="box-treino2" onclick="treino()">
+            <div class="box-treino2" onclick="treino2()">
                 <p>Treino 2</p>
             </div>
-            <div class="box-treino3" onclick="treino()">
+            <div class="box-treino3" onclick="treino3()">
                 <p>Treino 3</p>
             </div>
-            <div class="box-treino4" onclick="treino()">
+            <div class="box-treino4" onclick="treino4()">
                 <p>Treino 4</p>
             </div>
         </section>
         <!--Lista com treinos-->
         <section class="area">
-            <div class="lista"></div>
+            <div class="lista">
+                <div class="display">
+
+                </div>
+            </div>
         </section>
-    </body>
-    </html>
-    <script>
-        function treino() {
-            alert('Pão');
-        }
-    </script>
+    </main>
+</body>
+
+</html>
+
+<script>
+    function treino() {
+        Swal.fire({
+            title: 'Treino 1',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+    rgba(0,0,0,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    }
+
+    function treino2() {
+        Swal.fire({
+            title: 'Treino 2',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+    rgba(0,0,0,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    }
+
+    function treino3() {
+        Swal.fire({
+            title: 'Treino 3',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+    rgba(0,0,0,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    }
+
+    function treino4() {
+        Swal.fire({
+            title: 'Treino 4',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+    rgba(0,0,0,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    }
+</script>
