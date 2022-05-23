@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faustão Treino Maker</title>
+    <title>Faustão Training Maker</title>
     <link rel="stylesheet" href="css/estilo-treino.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
 </head>
 
 <body>
@@ -17,23 +18,23 @@
     <main class="tudo">
         <section class="menu">
             <div class="box-treino" onclick="treino()">
-                <p>Treino 1</p>
+                <p>Tá pegando fogo bicho </p>
             </div>
             <div class="box-treino2" onclick="treino2()">
-                <p>Treino 2</p>
+                <p>Agachamento nos 30</p>
             </div>
             <div class="box-treino3" onclick="treino3()">
-                <p>Treino 3</p>
+                <p>Amor proibido</p>
             </div>
             <div class="box-treino4" onclick="treino4()">
-                <p>Treino 4</p>
+                <p>Baby Fausto</p>
             </div>
         </section>
         <!--Lista com treinos-->
         <section class="area">
             <div class="lista">
-                <div class="display">
-
+                <div class="display" id="display">
+                    
                 </div>
             </div>
         </section>
@@ -45,65 +46,101 @@
 <script>
     function treino() {
         Swal.fire({
-            title: 'Treino 1',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(/images/trees.png)',
-            backdrop: `
-    rgba(0,0,0,0.4)
-    url("/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `
+            title: 'Tá pegando fogo bicho ',
+            text: 'Um treino de abdominal para queimar gordura',
+            imageUrl: './img/churrasqueira.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
         })
+
+        display.innerHTML = `
+            Treino: Tá pegando fogo bicho
+            <br><br>
+            Exercícios: 
+            <br>
+            Exercício 1: Prancha (4x10) <br>
+            Exercício 2: Abdominal (4x10)<br>
+            Exercício 3: Abdomen Infra (4x10)<br>
+            Exercício 4: Esteira (30 min)<br>
+        `;
+        
     }
 
     function treino2() {
         Swal.fire({
-            title: 'Treino 2',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(/images/trees.png)',
-            backdrop: `
-    rgba(0,0,0,0.4)
-    url("/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `
+            title: 'Agachamento nos 30',
+            text: 'Um treino rapido e eficiente',
+            imageUrl: './img/gatoLouco.png',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
         })
+        display.innerHTML = `
+            Treino: Agachamento nos 30
+            <br><br>
+            Exercícios: 
+            <br>
+            Exercício 1: Agachamento (4x10) <br>
+            Exercício 2: Mesa Flexora (4x10)<br>
+            Exercício 3: Cadeira Abdutora (4x10)<br>
+            Exercício 4: Cadeira Extensora (4x10)<br>
+        `;
+        
     }
 
     function treino3() {
         Swal.fire({
-            title: 'Treino 3',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(/images/trees.png)',
-            backdrop: `
-    rgba(0,0,0,0.4)
-    url("/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `
+            title: 'Amor proibido',
+            text: 'Um treino para conquistar sua amada(o)',
+            imageUrl: './img/selena.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
         })
+        display.innerHTML = `
+            Treino: Amor proibido
+            <br><br>
+            Exercícios: 
+            <br>
+            Exercício 1: Supino Reto (4x10) <br>
+            Exercício 2: Supino Inclinado (4x10)<br>
+            Exercício 3: Flexão de braço (4x10)<br>
+            Exercício 4: Fly (4x10) <br>
+            Exercício 5: Rosca Direta (30 min)<br>
+            Exercício 6: Scotch Maquina (4x10)<br>
+            Exercício 7: Rosca Martelo (4x10)<br>
+            Exercício 8: Tricps Puley (4x10) <br>
+            Exercício 9: Triceps Corda (4x10) <br>
+        `;
+        
     }
 
     function treino4() {
         Swal.fire({
-            title: 'Treino 4',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(/images/trees.png)',
-            backdrop: `
-    rgba(0,0,0,0.4)
-    url("/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `
+            title: 'Baby Fausto',
+            text: 'Um treino mais leve e descontraido',
+            imageUrl: './img/faustinho.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
         })
+
+        display.innerHTML = `
+            Treino: Baby Fausto
+            <br><br>
+            Exercícios: 
+            <br>
+            Exercício 1: Supino Maquina (3x15) <br>
+            Exercício 2: Tricps barra (3x15)<br>
+            Exercício 3: Pack deck (3x15)<br>
+            Exercício 4: Elevação lateral (3x15)<br>
+            Exercício 5: Desenvolvimento Maquina (30 min)<br>
+            Exercício 6: Supino reto (4x10) <br>
+            Exercício 7: Triceps Maquina (4x10) <br>
+            Exercício 8: Esteira (30 min) <br>
+            Exercício 9: Escada Matrix (10 min) <br>
+        `;
+
     }
 </script>
