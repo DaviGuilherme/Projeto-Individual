@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker</title>
+    <link rel="stylesheet" href="/CSS/estilo-maker.css">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
+</head>
+<body>
+
+    <main>
+        <section class="tudo">
+            <div class="calculadora">
+                <h1>IMC</h1>
+                <p>Digite seu peso atual:</p>
+                <input type="text" id="ipt_peso" placeholder="30 Kg"> <br><br>
+                <p>Digite sua altura atual:</p>
+                <input type="text" id="ipt_altura" placeholder="1.80 m"> <br> <br>
+                <button onclick="calcularM()">Calcular IMC Masculino</button> <br> <br>
+                <button onclick="calcularF()">Calcular IMC Feminino</button> <br> <br> <br>
+                <a class="aaa" href="treino.html">Voltar para Treinos</a> 
+
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
+<script>
+    function calcularM() {
+        var peso = Number(ipt_peso.value);
+        var altura = Number(ipt_altura.value);
+        var calculo = (altura * altura) / peso;
+        var vali = true;
+
+        if (peso == '') {
+            alert('Preencha o peso corretamente')
+            vali = false
+        }
+        if (altura == '') {
+            alert('Preencha a altura corretamente')
+            vali = false
+        }
+        if (vali) {
+                alert(`Seu Indice de Massa Corporea é ${calculo}`)
+            
+        }
+
+        
+
+    }
+    function calcularF() {
+        var peso = Number(ipt_peso.value);
+        var altura = Number(ipt_altura.value);
+        var calculo = ((altura * altura) / peso) * 0.9;
+        var vali = true;
+
+        if (peso == '') {
+            alert('Preencha o peso corretamente')
+            vali = false
+        }
+        if (altura == '') {
+            alert('Preencha a altura corretamente')
+            vali = false
+        }
+        if (vali) {
+                alert(`Seu Indice de Massa Corporea é ${calculo}`)
+        }
+
+    }
+
+    
+</script>

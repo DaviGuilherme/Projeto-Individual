@@ -38,7 +38,7 @@
     color: beige;
 }
 .box-treino:hover {
-    background-image: url(/Projeto-Individual/img/churrasqueira-600x400.jpg);
+    background-image: url(/img/churrasqueira-600x400.jpg);
     height: 120%;
     color: rgba(0, 0, 0, 0)
 }
@@ -59,7 +59,7 @@
     color: beige;
 }
 .box-treino2:hover {
-    background-image: url(/Projeto-Individual/img/sevira.jpg);
+    background-image: url(/img/sevira.jpg);
     height: 100%;
     color: rgba(0, 0, 0, 0)
 }
@@ -81,7 +81,7 @@
     color: beige;
 }
 .box-treino3:hover {
-    background-image: url(/Projeto-Individual/img/selena.jpg);
+    background-image: url(/img/selena.jpg);
     height: 29%;
     color: rgba(0, 0, 0, 0)
 }
@@ -103,9 +103,20 @@
     color: beige;
 }
 .box-treino4:hover {
-    background-image: url(/Projeto-Individual/img/faustinho.jpg);
+    background-image: url(/img/faustinho.jpg);
     height: 50%;
     color: rgba(0, 0, 0, 0)
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: #eee;
+    font-weight: bold;
 }
 
 /* Lista */
