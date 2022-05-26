@@ -124,6 +124,13 @@ a {
     text-decoration: none;
     font-weight: bolder;
 }
+a:hover {
+    transition: 0.5s;
+    background-color: #412b63;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
 
 #sobre {
     color: #fc4d3e;
