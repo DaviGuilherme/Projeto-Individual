@@ -8,13 +8,15 @@
     <title>Maker</title>
     <link rel="stylesheet" href="/CSS/estilo-maker.css">
     <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
     <main>
         <section class="tudo">
-            <div class="calculadora">
+            <div class="calculadora" id="div_calc">
                 <h1>IMC</h1>
                 <p>Digite seu peso atual:</p>
                 <input type="text" id="ipt_peso" placeholder="30 Kg"> <br><br>
@@ -24,7 +26,9 @@
                 <button onclick="calcularF()">Calcular IMC Feminino</button> <br> <br> <br>
                 <a class="aaa" href="treino.html">Voltar para Treinos</a>
             </div>
-            <div id="grafico" class="dash"></div>
+            <div id="div_graf">
+                <canvas id="myChart"></canvas>
+            </div>
         </section>
     </main>
 
@@ -50,14 +54,14 @@
         }
         if (vali) {
             alert(`Seu Indice de Massa Corporea é ${calculo}`)
-
+            div_graf.style.display = 'block';
+            div_calc.style.display = 'none';
         }
 
         historicoP.push(peso);
         ipt_peso.value = ``;
         historicoA.push(altura);
         ipt_altura.value = ``;
-
     }
     function calcularF() {
         var peso = Number(ipt_peso.value);
@@ -75,12 +79,18 @@
         }
         if (vali) {
             alert(`Seu Indice de Massa Corporea é ${calculo}`)
+            div_graf.style.display = 'block';
+            div_calc.style.display = 'none';
         }
 
         historicoA.push(altura);
         ipt_altura.value = ``;
         historicoP.push(peso);
         ipt_peso.value = ``;
+    }
+
+    function ir() {
+        
     }
 
     
@@ -108,4 +118,9 @@
     data: data,
     options: {}
   };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
 </script>
