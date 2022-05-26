@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/CSS/estilo-maker.css">
     <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
 </head>
+
 <body>
 
     <main>
@@ -20,15 +22,20 @@
                 <input type="text" id="ipt_altura" placeholder="1.80 m"> <br> <br>
                 <button onclick="calcularM()">Calcular IMC Masculino</button> <br> <br>
                 <button onclick="calcularF()">Calcular IMC Feminino</button> <br> <br> <br>
-                <a class="aaa" href="treino.html">Voltar para Treinos</a> 
-
+                <a class="aaa" href="treino.html">Voltar para Treinos</a>
+            </div>
+            <div id="grafico" class="dash">
+                
             </div>
         </section>
     </main>
-    
+
 </body>
+
 </html>
 <script>
+    var historicoP = [];
+    var historicoA = [];
     function calcularM() {
         var peso = Number(ipt_peso.value);
         var altura = Number(ipt_altura.value);
@@ -44,11 +51,14 @@
             vali = false
         }
         if (vali) {
-                alert(`Seu Indice de Massa Corporea é ${calculo}`)
-            
+            alert(`Seu Indice de Massa Corporea é ${calculo}`)
+
         }
 
-        
+        historicoP.push(peso);
+        ipt_peso.value = ``;
+        historicoA.push(altura);
+        ipt_altura.value = ``;
 
     }
     function calcularF() {
@@ -66,10 +76,54 @@
             vali = false
         }
         if (vali) {
-                alert(`Seu Indice de Massa Corporea é ${calculo}`)
+            alert(`Seu Indice de Massa Corporea é ${calculo}`)
         }
 
+        historicoA.push(altura);
+        ipt_altura.value = ``;
+        historicoP.push(peso);
+        ipt_peso.value = ``;
     }
 
-    
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        },
+    };
+
+    const labels = Utils.months({ count: 7 });
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
 </script>
