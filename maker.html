@@ -24,7 +24,7 @@
                 <input type="text" id="ipt_altura" placeholder="1.80 m"> <br> <br>
                 <button onclick="calcularM()">Calcular IMC Masculino</button> <br> <br>
                 <button onclick="calcularF()">Calcular IMC Feminino</button> <br> <br> <br>
-                <a class="aaa" href="treino.html">Voltar para Treinos</a>
+                <a class="aaa" href="index.html">Voltar para Home</a>
             </div>
             <div id="div_graf">
                 <canvas id="myChart"></canvas>
@@ -54,8 +54,6 @@
         }
         if (vali) {
             alert(`Seu Indice de Massa Corporea é ${calculo}`)
-            div_graf.style.display = 'block';
-            div_calc.style.display = 'none';
         }
 
         historicoP.push(peso);
@@ -79,8 +77,6 @@
         }
         if (vali) {
             alert(`Seu Indice de Massa Corporea é ${calculo}`)
-            div_graf.style.display = 'block';
-            div_calc.style.display = 'none';
         }
 
         historicoA.push(altura);
@@ -89,38 +85,5 @@
         ipt_peso.value = ``;
     }
 
-    function ir() {
-        
-    }
-
     
-  const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
-
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
-
-  const config = {
-    type: 'line',
-    data: data,
-    options: {}
-  };
-
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
 </script>

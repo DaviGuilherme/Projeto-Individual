@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="css/estilo-registro.css">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="registro">
+            Entre com a data de hoje: <br> <br>
+            <input type="text" id="ipt_data"> <br> <br>
+            Quantos dias da semana você se exercitou ? <br> <br>
+            <input type="text" id="ipt_dias"><br> <br>
+            <button onclick="registrar()">Registrar</button>
+            <div id="msg">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    function registrar() {
+        var dias = Number(ipt_dias.value);
+        var data = ipt_data.value;
+
+        if (dias < 0) {
+            alert('Digite uma quantidade válida (acima de 0)')
+        } else if (dias < 3) {
+            alert('Boa frequêcia, mas busque ir no mínimo 3 dias na semana')
+            msg.innerHTML = `Até a data ${data}, voce praticou seus exercícios ${dias} na semana`;
+        } else if (dias >= 3 && dias <= 5) {
+            alert('Muito bom! Frequência excelente')
+            msg.innerHTML = `Até a data ${data}, voce praticou seus exercícios ${dias} na semana`;
+        } else if (dias >= 6 && dias <= 7) {
+            alert('Ótima frequência, mas busque tirar, no minimo, 1 dia por semena para descansar')
+            msg.innerHTML = `Até a data ${data}, voce praticou seus exercícios ${dias} na semana`;
+        } else if (dias > 7) {
+            alert('Impossivel')
+        }
+
+    }
+
+    const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+    
+</script>
