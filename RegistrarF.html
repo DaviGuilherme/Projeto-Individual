@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="./img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo-registro.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="registro">
+            Entre com o mês atual: <br>
+            <select id="box_meses">
+                <option value="0">Selecione um mês</option>
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Marco">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+        </select> <br> <br>
+        Quantos kilos voce perdeu este mês ? <br>
+        <input type="text" id="ipt_kilo">
+        <button onclick="registrar()">Registrar</button> <br> <br>
+        <div style="height: 400px; width: 400px;">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
+<script>
+    function registrar() {
+        var kilos = ipt_kilo.value;
+        var mes = box_meses.value;
+
+        alert(`Em ${mes} você emagreceu ${kilos} Kg`)
+    }
+
+
+    // Início do Gráfico
+
+    const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Kilos aos meses',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
